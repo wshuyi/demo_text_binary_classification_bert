@@ -1,3 +1,12 @@
+import pandas as pd
+import tensorflow as tf
+import tensorflow_hub as hub
+import pickle
+import bert
+from bert import run_classifier
+from bert import optimization
+from bert import tokenization
+
 def create_tokenizer_from_hub_module(bert_model_hub):
   """Get the vocab file and casing info from the Hub module."""
   with tf.Graph().as_default():
